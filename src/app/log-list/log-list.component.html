@@ -1,0 +1,9 @@
+<div class="container-main_logs-list_wrapper">
+    <ul class="container-main_logs-list_wrapper_list">
+        <li class="container-main_logs-list_wrapper_list-item" *ngFor="let log of logsList">
+            <div (click)="displayLog(log.key)">{{log.key}}</div>
+            <div data-key="{{log.key}}" (click)="deleteLog(log.key)" title="Delete" class="delete-log"><span class="close"></span>
+            </div>
+        </li>
+    </ul>
+</div>

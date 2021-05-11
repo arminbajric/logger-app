@@ -1,0 +1,29 @@
+.container-main_log-main-body_column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-left: 1px solid silver;
+    .container-main_log-main-body_column-item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .container-main_log-main-body_column-item_label{
+            width: 200px;
+        }
+        .container-main_log-main-body_column-item_input{
+            width: 100%;
+            line-height: 25px;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+.form-error{
+    color: brown;
+    padding:5px;
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+<form class="container-header_search-form" [formGroup]="queryForm" (ngSubmit)="submitQuery()">
+    <select formControlName="stageSelect" class="container-header_search-form_stage-select">
+        <option *ngFor="let stage of apiStages">{{stage}}</option>
+    </select>
+    <input [ngStyle]="{'border-color': queryInputBorderColor}"
+        placeholder="Type your query in e.g. user?name='Joe'&role='developer'" formControlName="queryInput"
+        class="container-header_search-form_input" type="text">
+    <input type="submit" class="container-header_search-form_button" value="Get log" title="Get log">
+</form>
+<div *ngIf="submitted"> <label *ngIf="submitted&& queryForm.get('queryInput').hasError('required')"
+        class="lbl ">Error.Query is required</label></div>

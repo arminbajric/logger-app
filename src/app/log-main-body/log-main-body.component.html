@@ -1,0 +1,72 @@
+<form [formGroup]="logFormGroup" (ngSubmit)="saveLogChanges()" class="container-main_log-main-body_column">
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Log name
+        </div>
+        <input formControlName="key" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Host
+        </div>
+        <input formControlName="host" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Method
+        </div>
+        <input formControlName="method" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Protocol
+        </div>
+        <input formControlName="protocol" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Path
+        </div>
+        <input formControlName="path" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Params
+        </div>
+        <textarea formControlName="params" class="container-main_log-main-body_column-item_input"
+            type="text"></textarea>
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Query
+        </div>
+        <textarea formControlName="query" class="container-main_log-main-body_column-item_input" type="text"></textarea>
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            API Stage
+        </div>
+        <input formControlName="stage" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Request time
+        </div>
+        <input formControlName="requestTime" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Request timestamp
+        </div>
+        <input formControlName="requestTimeEpoch" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <div class="container-main_log-main-body_column-item">
+        <div class="container-main_log-main-body_column-item_label">
+            Client adress
+        </div>
+        <input formControlName="clientAdress" class="container-main_log-main-body_column-item_input" type="text">
+    </div>
+    <label class="form-error" *ngIf="!formIsValid">All fields are required!</label>
+    <input type="submit" value="Save">
+
+</form>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container-header">
+    <app-log-query-form (logCreatedEvent)="refreshLogsList($event)"></app-log-query-form>
+
+  </div>
+  <div class="container-main">
+    <div class="container-main_logs-list">
+      <app-logs-list (displayLogEvent)="selectLogForDisplay($event)" [logsList]="logsList"></app-logs-list>
+    </div>
+
+    <app-log-main-body class="container-main_log-main-body" [logData]="logToDisplay"></app-log-main-body>
+
+  </div>
+</div>

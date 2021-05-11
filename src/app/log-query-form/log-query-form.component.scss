@@ -1,0 +1,24 @@
+.container-header_search-form{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid silver;
+    .container-header_search-form_input{
+      width: 100%;
+      line-height: 25px;
+      border-radius: 5px;
+      outline: none;
+    }
+    .container-header_search-form_button{
+        min-width: 80px;
+        margin-left: 5px;
+        
+    }
+    .container-header_search-form_stage-select{
+      margin-right: 10px;
+    }
+}
